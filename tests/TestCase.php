@@ -3,8 +3,8 @@
 namespace Ontherocksoftware\RagLaravel\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Ontherocksoftware\RagLaravel\RagLaravelServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
