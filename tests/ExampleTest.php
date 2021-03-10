@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Ontherocksoftware\RagLaravel\Tests;
 
 class ExampleTest extends TestCase
 {

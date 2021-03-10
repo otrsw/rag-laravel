@@ -1,21 +1,21 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "ontherocksoftware/rag-laravel",
+    "description": "Laravel package to easily interact with your red-amber.green monitors",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "ontherocksoftware",
+        "rag-laravel"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/ontherocksoftware/rag-laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Heinz Seldte",
+            "email": "heinz@otrsw.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^7.4",
         "spatie/laravel-package-tools": "^1.1",
         "illuminate/contracts": "^8.0"
     },
@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Ontherocksoftware\\RagLaravel\\": "src",
+            "Ontherocksoftware\\RagLaravel\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Ontherocksoftware\\RagLaravel\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Ontherocksoftware\\RagLaravel\\RagLaravelServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "RagLaravel": "Ontherocksoftware\\RagLaravel\\RagLaravelFacade"
             }
         }
     },

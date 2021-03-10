@@ -1,17 +1,16 @@
-# :package_description
+# Laravel package to easily interact with your red-amber.green monitors
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_name/:package_name/run-tests?label=tests)](https://github.com/:vendor_name/:package_name/actions?query=workflow%3ATests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/:vendor_name/:package_name/Check%20&%20fix%20styling?label=code%20style)](https://github.com/:vendor_name/:package_name/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ontherocksoftware/rag-laravel.svg?style=flat-square)](https://packagist.org/packages/ontherocksoftware/rag-laravel)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ontherocksoftware/rag-laravel/run-tests?label=tests)](https://github.com/ontherocksoftware/rag-laravel/actions?query=workflow%3ATests+branch%3Amaster)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ontherocksoftware/rag-laravel/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ontherocksoftware/rag-laravel/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/ontherocksoftware/rag-laravel.svg?style=flat-square)](https://packagist.org/packages/ontherocksoftware/rag-laravel)
 
-**Note:** Run `./configure-skeleton` to get started, or manually replace  ```:author_name``` ```:author_username``` ```:author_email``` ```:vendor_name``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](.github/CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can also run `configure-skeleton.sh` to do this automatically.
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-skeleton-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-skeleton-laravel)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-rag-laravel-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-rag-laravel-laravel)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
@@ -22,19 +21,19 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require :vendor_name/:package_name
+composer require ontherocksoftware/rag-laravel
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag=":package_name-migrations"
+php artisan vendor:publish --provider="Ontherocksoftware\RagLaravel\RagLaravelServiceProvider" --tag="rag-laravel-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag=":package_name-config"
+php artisan vendor:publish --provider="Ontherocksoftware\RagLaravel\RagLaravelServiceProvider" --tag="rag-laravel-config"
 ```
 
 This is the contents of the published config file:
@@ -47,8 +46,8 @@ return [
 ## Usage
 
 ```php
-$skeleton = new Spatie\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+$rag-laravel = new Ontherocksoftware\RagLaravel();
+echo $rag-laravel->echoPhrase('Hello, Ontherocksoftware!');
 ```
 
 ## Testing
@@ -71,7 +70,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Heinz Seldte](https://github.com/otrsw)
 - [All Contributors](../../contributors)
 
 ## License

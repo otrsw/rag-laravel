@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Ontherocksoftware\RagLaravel\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class RagLaravelCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'rag-laravel';
 
     public $description = 'My command';
 
