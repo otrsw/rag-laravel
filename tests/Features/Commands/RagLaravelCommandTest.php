@@ -15,6 +15,5 @@ class RagLaravelCommandTest extends TestCase
     {
         $this->artisan('rag-laravel')
         ->assertExitCode(0);
-
-    }    
+    }
 }

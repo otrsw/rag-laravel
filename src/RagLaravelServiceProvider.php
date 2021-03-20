@@ -2,7 +2,6 @@
 
 namespace Ontherocksoftware\RagLaravel;
 
-use Ontherocksoftware\RagLaravel\Commands\RagLaravelCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
