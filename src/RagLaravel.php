@@ -9,7 +9,7 @@ use Spatie\LaravelRay\Ray;
 
 class RagLaravel
 {
-    const BASE_URL = "https://api-test.red-amber.green/api/";
+    const BASE_URL = "https://test.red-amber.green/api/";
     
     private function buildRequest()
     {
