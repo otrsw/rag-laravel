@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/ontherocksoftware/rag-laravel.svg?style=flat-square)](https://packagist.org/packages/ontherocksoftware/rag-laravel)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Quick and simple way to expose realtime business KPIs of your system or software to your user community.
 
 ## Support us
 
@@ -24,13 +24,6 @@ You can install the package via composer:
 composer require ontherocksoftware/rag-laravel
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --provider="Ontherocksoftware\RagLaravel\RagLaravelServiceProvider" --tag="rag-laravel-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 ```bash
 php artisan vendor:publish --provider="Ontherocksoftware\RagLaravel\RagLaravelServiceProvider" --tag="rag-laravel-config"
@@ -40,14 +33,42 @@ This is the contents of the published config file:
 
 ```php
 return [
+
+    /**
+     * Your API token. Obtain from your account at https://red-amber.green 
+     */
+    'token' => env('RAG_API_TOKEN','YOUR_TOKEN'),
+
+    /**
+     * If you prefer to use the service without exception, set this to false
+     */
+
+     'exceptions' => env('RAG_WITH_EXCEPTIONS',true)
+
 ];
 ```
 
 ## Usage
 
 ```php
-$rag-laravel = new Ontherocksoftware\RagLaravel();
-echo $rag-laravel->echoPhrase('Hello, Ontherocksoftware!');
+use Ontherocksoftware\RagLaravel\RagLaravel;
+
+/**
+ * Assuming you added a monitor to your account named 'Stock Levels' you can interact with that monitor 
+ * using the static methods proivided:
+ */ 
+
+//With no additional info simply use the red, amber or green method and pass in the name
+
+//Your code here to check stock levels....
+
+//If all good just set to green
+RagLaravel::green('Stock Levels');
+
+//If you want to provide additional info you can pass a short message and a link to more in depth info
+RagLaravel::amber('Stock Levels', 'Stock levels dropped significantly in the last 24 hours', 'https://www.mysystem.com/dashboard/stocklevels');
+
+
 ```
 
 ## Testing

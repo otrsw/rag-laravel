@@ -12,6 +12,8 @@ class RagLaravelCommand extends Command
 
     public function handle()
     {
-        $this->comment('All done');
+        $echo = config('rag-laravel.command_output_text');
+        $this->comment("RAG Package");
+        $this->comment($echo);
     }
 }

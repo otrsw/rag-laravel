@@ -17,9 +17,6 @@ class RagLaravelServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('rag-laravel')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_rag_laravel_table')
-            ->hasCommand(RagLaravelCommand::class);
+            ->hasConfigFile();
     }
 }

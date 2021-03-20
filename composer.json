@@ -17,7 +17,9 @@
     "require": {
         "php": "^7.4",
         "spatie/laravel-package-tools": "^1.1",
-        "illuminate/contracts": "^8.0"
+        "illuminate/contracts": "^8.0",
+        "guzzlehttp/guzzle": "^7.0.1"
+
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
@@ -27,8 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ontherocksoftware\\RagLaravel\\": "src",
-            "Ontherocksoftware\\RagLaravel\\Database\\Factories\\": "database/factories"
+            "Ontherocksoftware\\RagLaravel\\": "src"
         }
     },
     "autoload-dev": {
@@ -50,7 +51,7 @@
                 "Ontherocksoftware\\RagLaravel\\RagLaravelServiceProvider"
             ],
             "aliases": {
-                "RagLaravel": "Ontherocksoftware\\RagLaravel\\RagLaravelFacade"
+                "RagLaravel": "Ontherocksoftware\\RagLaravel\\RagLaravel"
             }
         }
     },
