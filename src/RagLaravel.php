@@ -10,7 +10,7 @@ use Ontherocksoftware\RagLaravel\Exceptions\RagException;
 
 class RagLaravel
 {
-    const BASE_URL = "http://heinzpc.test/api/";
+    const BASE_URL = "https://api-test.red-amber.green/api/";
     
     private function buildRequest() {
         //$token = 
