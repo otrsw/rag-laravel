@@ -5,7 +5,6 @@ namespace Ontherocksoftware\RagLaravel;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 use Ontherocksoftware\RagLaravel\Exceptions\RagException;
-use Spatie\LaravelRay\Ray;
 
 class RagLaravel
 {
@@ -26,10 +25,6 @@ class RagLaravel
     private static function post($url, $data)
     {
         $token = config('rag-laravel.token');
-        ray("URL[$url] Data next:");
-        ray($data);
-        ray("Full url [". static::BASE_URL . $url ."] Posting now...");
-
         return Http::withHeaders(['Accept' => 'application/json'])->withToken($token)->post(static::BASE_URL . $url, $data);
     }
 
@@ -45,7 +40,6 @@ class RagLaravel
 
     public static function red($name, $message = null, $moreinfourl = null)
     {
-        ray("Gonna set red [$name]");
         if ($message) {
             $data['message'] = $message;
         }
@@ -53,7 +47,6 @@ class RagLaravel
             $data['more_info_url'] = $moreinfourl;
         }
         $response = static::post("monitor/$name/red", $data);
-        ray($response)->red();
         if ($response->ok()) {
             return $response->json();
         }
@@ -73,8 +66,6 @@ class RagLaravel
         if ($response->ok()) {
             return $response->json();
         }
-        ray($response);
-
         throw new RagException(Arr::get($response->json(), 'message', 'Unknown error please check your config'));
     }
 

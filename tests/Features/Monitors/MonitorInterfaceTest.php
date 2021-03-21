@@ -14,7 +14,6 @@ class MonitorInterfaceTest extends TestCase
     {
         config()->set('rag-laravel.token', static::TEST_TOKEN);
         $monitors = RagLaravel::monitors();
-        ray($monitors);
         $this->assertEquals(Arr::get($monitors, 'current_page', -1), 1);
     }
 
@@ -31,11 +30,7 @@ class MonitorInterfaceTest extends TestCase
             $monitor = RagLaravel::red($name, $message, $url);
         } catch (RagException $rag) {
             $error = $rag->getMessage();
-            ray($rag);
-            ray("RAG Error message is " . $error);
         }
-
-        ray($monitor);
         $this->assertEquals(Arr::get($monitor, 'status', 'unknown'), 'red');
     }
 
@@ -52,11 +47,7 @@ class MonitorInterfaceTest extends TestCase
             $monitor = RagLaravel::green($name, $message, $url);
         } catch (RagException $rag) {
             $error = $rag->getMessage();
-            ray($rag);
-            ray("RAG Error message is " . $error);
         }
-
-        ray($monitor);
         $this->assertEquals(Arr::get($monitor, 'status', 'unknown'), 'green');
     }
 
@@ -73,11 +64,8 @@ class MonitorInterfaceTest extends TestCase
             $monitor = RagLaravel::amber($name, $message, $url);
         } catch (RagException $rag) {
             $error = $rag->getMessage();
-            ray($rag);
-            ray("RAG Error message is " . $error);
         }
 
-        ray($monitor);
         $this->assertEquals(Arr::get($monitor, 'status', 'unknown'), 'amber');
     }
 
@@ -87,10 +75,8 @@ class MonitorInterfaceTest extends TestCase
 
         try {
             $monitors = RagLaravel::monitors();
-            ray($monitors);
         } catch (RagException $rag) {
             $error = $rag->getMessage();
-            ray($error);
         }
         
         $this->assertEquals($error, 'Unauthenticated.');
