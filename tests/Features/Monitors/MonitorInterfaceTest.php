@@ -8,9 +8,11 @@ use Ontherocksoftware\RagLaravel\RagLaravel;
 
 class MonitorInterfaceTest extends TestCase
 {
+    static TEST_TOKEN = 'H2X6mP42Vy7BO4fyY7qiSOOiqE1aYh9cpxglO0sT';
+
     public function can_list_monitors()
     {
-        config()->set('rag-laravel.token', '5ULyEOwRDtTUFRCUar5b4lNt8Vhu16IVsWQpMfBT');
+        config()->set('rag-laravel.token', static::TEST_TOKEN);
         $monitors = RagLaravel::monitors();
         ray($monitors);
         $this->assertEquals(Arr::get($monitors, 'current_page', -1), 1);
@@ -19,7 +21,7 @@ class MonitorInterfaceTest extends TestCase
     /** @test */
     public function can_set_existing_monitor_red()
     {
-        config()->set('rag-laravel.token', '5ULyEOwRDtTUFRCUar5b4lNt8Vhu16IVsWQpMfBT');
+        config()->set('rag-laravel.token', static::TEST_TOKEN);
         $name = 'Test';
         $url = 'https://www.google.com/search?q=red';
         $message = 'Updated from test '. now() .' case testing status should be green';
@@ -40,7 +42,7 @@ class MonitorInterfaceTest extends TestCase
     /** @test */
     public function can_set_existing_monitor_green()
     {
-        config()->set('rag-laravel.token', '5ULyEOwRDtTUFRCUar5b4lNt8Vhu16IVsWQpMfBT');
+        config()->set('rag-laravel.token', static::TEST_TOKEN);
         $name = 'Test';
         $url = 'https://www.google.com/search?q=green';
         $message = 'Updated from test '. now() .' case testing status should be green';
@@ -61,7 +63,7 @@ class MonitorInterfaceTest extends TestCase
     /** @test */
     public function can_set_existing_monitor_amber()
     {
-        config()->set('rag-laravel.token', '5ULyEOwRDtTUFRCUar5b4lNt8Vhu16IVsWQpMfBT');
+        config()->set('rag-laravel.token', static::TEST_TOKEN);
         $name = 'Test';
         $url = 'https://www.google.com/search?q=amber';
         $message = 'Updated from test '. now() .' case testing status should be green';
