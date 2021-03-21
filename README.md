@@ -50,7 +50,6 @@ use Ontherocksoftware\RagLaravel\RagLaravel;
  * using the static methods proivided:
  */ 
 
-//With no additional info simply use the red, amber or green method and pass in the name
 
 //Your code here to check stock levels....
 
