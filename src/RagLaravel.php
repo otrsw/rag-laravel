@@ -25,6 +25,7 @@ class RagLaravel
     private static function post($url, $data)
     {
         $token = config('rag-laravel.token');
+
         return Http::withHeaders(['Accept' => 'application/json'])->withToken($token)->post(static::BASE_URL . $url, $data);
     }
 
@@ -66,6 +67,7 @@ class RagLaravel
         if ($response->ok()) {
             return $response->json();
         }
+
         throw new RagException(Arr::get($response->json(), 'message', 'Unknown error please check your config'));
     }
 
