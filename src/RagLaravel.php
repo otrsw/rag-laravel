@@ -9,7 +9,6 @@ use Ontherocksoftware\RagLaravel\Exceptions\RagException;
 class RagLaravel
 {
     const BASE_URL = "https://test.red-amber.green/api/";
-    
 
     private static function get($url)
     {
