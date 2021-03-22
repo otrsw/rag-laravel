@@ -40,6 +40,7 @@ class RagLaravel
 
     public static function red($name, $message = null, $moreinfourl = null)
     {
+        $data = [];
         if ($message) {
             $data['message'] = $message;
         }
@@ -56,6 +57,7 @@ class RagLaravel
 
     public static function green($name, $message = null, $moreinfourl = null)
     {
+        $data = [];
         if ($message) {
             $data['message'] = $message;
         }
@@ -71,6 +73,7 @@ class RagLaravel
 
     public static function amber($name, $message = null, $moreinfourl = null)
     {
+        $data = [];
         if ($message) {
             $data['message'] = $message;
         }

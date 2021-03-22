@@ -8,7 +8,7 @@ use Ontherocksoftware\RagLaravel\RagLaravel;
 
 class MonitorInterfaceTest extends TestCase
 {
-    const TEST_TOKEN = 'H2X6mP42Vy7BO4fyY7qiSOOiqE1aYh9cpxglO0sT';
+    const TEST_TOKEN = 'wTO6fn3OiA8kNIxhSDJMB6NHwzfZoFda66IcSYGX';
 
     public function can_list_monitors()
     {
