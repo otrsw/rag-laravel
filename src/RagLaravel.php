@@ -10,10 +10,6 @@ class RagLaravel
 {
     const BASE_URL = "https://test.red-amber.green/api/";
     
-    private function buildRequest()
-    {
-        //$token =
-    }
 
     private static function get($url)
     {
